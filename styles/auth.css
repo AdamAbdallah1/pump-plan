@@ -48,6 +48,16 @@
         flex-direction: column;
     }
 
+    .login-input {
+        display: flex;
+    }
+
+    .login-container label img {
+        width: 15px;
+        justify-content: center;
+        align-items: center;
+    }
+
     .login-container input {
         text-align: center;
         font-weight: 200;
