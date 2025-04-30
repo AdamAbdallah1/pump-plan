@@ -55,6 +55,7 @@
         background-color: black;
         color: white;
         height: 30px;
+        border: none;
     }
 
     .login-container button {
@@ -63,5 +64,14 @@
         background-color: black;
         color: white;
         height: 30px;
+    }
+
+    .login-container p {
+        font-size: 10px;
+    }
+
+    .login-container a{
+        text-decoration: none;
+        color: rgb(63, 63, 63);
     }
 }
