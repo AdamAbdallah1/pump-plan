@@ -6,11 +6,11 @@
     }
     
     main {
-        background-color: black;
-        color: white;
-        margin-top: 25%;
+        width: 90%;
+        color: black;
+        margin-top: 15%;
         width: 70%;
-        height: 50vh;
+        height: 60vh;
         border-radius: 20px;
         text-align: center;
         font-family: 'Manrope', sans-serif;
@@ -32,4 +32,36 @@
         font-size: 10px;
     }
 
+
+    .login-container {
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        gap: 20px;
+        font-weight: 200;
+        align-items: center;
+    }
+
+    .login-container label {
+        display: flex;
+        gap: 5px;
+        flex-direction: column;
+    }
+
+    .login-container input {
+        text-align: center;
+        font-weight: 200;
+        border-radius: 12px;
+        background-color: black;
+        color: white;
+        height: 30px;
+    }
+
+    .login-container button {
+        border-radius: 12px;
+        width: 30%;
+        background-color: black;
+        color: white;
+        height: 30px;
+    }
 }
