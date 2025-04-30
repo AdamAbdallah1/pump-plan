@@ -39,6 +39,7 @@ header img {
         display: flex;
         flex-direction: column;
         gap: 30px;
+        align-items: center;
     }
 
     .hero-section {
@@ -68,12 +69,23 @@ header img {
     }
 
     .cta-section {
+        width: 90%;
         background-color: black;
         color: white;
-        border-radius: 12px;
+        border-radius: 12px 25px 12px 25px;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-content: center;
+        padding: 10px;
+    }
+
+    .cta-title {
+        text-align: center;
+        font-weight: 300;
+    }
+
+    .cta-subtitle {
+        text-align: center;
     }
 }
