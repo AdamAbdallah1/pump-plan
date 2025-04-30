@@ -108,4 +108,13 @@ header img {
         text-decoration: underline;
     }
 
+
+    footer p{
+        font-size: 15px;
+    }
+}
+
+footer {
+    margin-top: 20px;
+    padding: 10px;
 }
