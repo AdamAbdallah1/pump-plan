@@ -1,0 +1,35 @@
+@media only screen and (max-width: 370px) {
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    main {
+        background-color: black;
+        color: white;
+        margin-top: 25%;
+        width: 70%;
+        height: 50vh;
+        border-radius: 20px;
+        text-align: center;
+        font-family: 'Manrope', sans-serif;
+    }
+
+    .login-header {
+        padding: 10px;
+        font-size: 15px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .login-header h1{
+        font-weight: 200;
+    }
+
+    .login-header p{
+        font-size: 10px;
+    }
+
+}
