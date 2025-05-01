@@ -26,6 +26,14 @@ header a:hover{
         align-items: center;
     }
 
+    .hero-section p{
+        font-size: 20px;
+    }
+
+    .hero-section a{
+        color: gray;
+    }
+
     .wel-email {
         color: gray;
     }
@@ -53,6 +61,23 @@ header a:hover{
     .search-icon {
         width: 20px;
         cursor: pointer;
+    }
+
+    .exercise-card {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        justify-content: space-around;
+        align-items: left;
+    }
+
+    .exercise-card h3{
+        font-weight: 500;
+        text-decoration: underline;
+    }
+
+    .exercise-card p{
+        font-weight: 200;
     }
 
 }
