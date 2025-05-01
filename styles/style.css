@@ -48,7 +48,6 @@
 
     .cta-section {
         text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.7);
-        background-image: url('../assets/imgs/gym-background-laptop.jpg');
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
@@ -144,10 +143,6 @@ span {
 
 .cta-section {
     text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.7);
-    background-image: url('../assets/imgs/gym-background-laptop.jpg');
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);        width: 90%;
     background-color: black;
     color: white;
