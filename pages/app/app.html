@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../styles/temp.css">
     <link rel="stylesheet" href="../../styles/app.css">
-    <script type="module" src="../../scripts/app.js" defer></script>
+    <script type="module" src="../../scripts/authUser.js" defer></script>
 
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&display=swap" rel="stylesheet">
     <title>Main Pump Plan Page</title>
@@ -19,11 +19,16 @@
             <p>
                 Welcome <span class="wel-email" id="email"></span>
             </p>
+            <a href="prepare.html">Prepare your Pump Plan.</a>
             <div class="search-container">
-                <input type="text" placeholder="Search..." class="search-input">
-                <button class="search-btn"><img class="search-icon" src="../../assets/icons/search.svg" alt="Search icon svg"></button>
+                <input id="search-input" type="text" placeholder="Search..." class="search-input">
+                <button id="search-button" class="search-btn"><img class="search-icon" src="../../assets/icons/search.svg" alt="Search icon svg"></button>
+            </div>
+            <div class="results-section">
+                <p id="results"></p>
             </div>
         </section>
     </main>
+    <script src="../../scripts/app.js"></script>
 </body>
 </html>
