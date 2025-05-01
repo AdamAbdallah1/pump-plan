@@ -5,6 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="../../styles/temp.css">
 	<link rel="stylesheet" href="../../styles/auth.css">
+	<script type="module" src="../../scripts/login.js" defer></script>
 	<title>PumpPlan - Login</title>
 </head>
 <body>
@@ -19,7 +20,8 @@
 		<section class="login-container">
 			<label for="email"><div class="login-input"><img src="../../assets/icons/mail.svg" alt="">Email:</div><input type="email" name="email" id="email" placeholder="Enter your Email"></label>
 			<label for="password"><div class="login-input"><img src="../../assets/icons/password.svg" alt="">Password:</div><input type="password" name="password" id="password" placeholder="Enter your Password"></label>
-			<button>Login</button>
+			<p id="auth-status"></p>
+			<button id="login-button">Login</button>
 			<p>Not a Member? <a href="register.html">Register now</a></p>
 		</section>	
 	</main>
