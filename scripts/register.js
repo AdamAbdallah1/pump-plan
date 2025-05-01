@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const email = document.getElementById("email").value;
         const password = document.getElementById("password").value;
         const authStatus = document.getElementById("auth-status");
-        if (email && password){
+        if (email && password && password.length > 5){
             const auth = getAuth();
             createUserWithEmailAndPassword(auth, email, password)
             .then((userCredential) => {
