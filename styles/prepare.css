@@ -1,0 +1,42 @@
+header {
+    display: flex;
+    justify-content: space-around;
+}
+
+header a{
+    color: gray;
+    text-decoration: none;
+    cursor: pointer;
+    font-family: 'Manrope', sans-serif;
+}
+
+header a:hover {
+    color: white;
+}
+
+* {
+    font-family: 'Manrope', sans-serif;
+}
+
+@media only screen and (max-width: 370px) {
+    .hero-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .hero-section h2 {
+        margin-top: 15px;
+        font-weight: 200;
+    }
+
+    .plan {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        align-items: center;
+    }
+
+
+}
