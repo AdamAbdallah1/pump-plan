@@ -50,6 +50,8 @@
 
     .login-input {
         display: flex;
+        justify-content: center;
+        gap: 10px;
     }
 
     .login-container label img {
