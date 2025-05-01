@@ -23,21 +23,23 @@ document.addEventListener("DOMContentLoaded", () => {
     regBtn.addEventListener("click", (event) => {
         const email = document.getElementById("email").value;
         const password = document.getElementById("password").value;
+        const authStatus = document.getElementById("auth-status");
         if (email && password){
             const auth = getAuth();
             createUserWithEmailAndPassword(auth, email, password)
             .then((userCredential) => {
-                alert("Done user");
+                authStatus.textContent = "User Registered Successfully!";
                 const user = userCredential.user;
+                window.location.href = "../pages/auth/login.html";
             })
             .catch((error) => {
                 const errorCode = error.code;
                 const errorMessage = error.message;
-                alert(`Error: ${error.message}`);
+                authStatus.textContent = `Error: ${error.message}`;
             });
                 
         } else {
-            alert("no");
+            authStatus.textContent = "Please field all required inputs.";
         }
     })
 })
