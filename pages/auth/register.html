@@ -4,11 +4,25 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="../../styles/temp.css">
-	<title>Register - PumpPlan</title>
+	<link rel="stylesheet" href="../../styles/auth.css">
+	<title>PumpPlan - Register</title>
 </head>
 <body>
 	<header>
         <img src="../../assets/logos/pumpplan-logo.svg" alt="pump plan main logo">
     </header>
+	<main>
+		<section class="login-header">
+			<h1>Not a Member?</h1>
+			<p>Register now to start your workouts, track your progress, and stay pumped!</p>
+		</section>
+		<section class="login-container">
+			<label for="username"><div class="login-input"><img src="../../assets/icons/user.svg" alt="">Username:</div><input type="text" name="username" id="username" placeholder="Enter your Username"></label>
+			<label for="email"><div class="login-input"><img src="../../assets/icons/mail.svg" alt="">Email:</div><input type="email" name="email" id="email" placeholder="Enter your Email"></label>
+			<label for="password"><div class="login-input"><img src="../../assets/icons/password.svg" alt="">Password:</div><input type="password" name="password" id="password" placeholder="Enter your Password"></label>
+			<button>Login</button>
+			<p>Already a Member? <a href="login.html">Login now</a></p>
+		</section>		
+	</main>
 </body>
 </html>
