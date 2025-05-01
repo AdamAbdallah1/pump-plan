@@ -2,19 +2,18 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-main {
-    width: 90%;
-    color: black;
-    margin-top: 5%;
-    width: 70%;
-    height: 60vh;
-    border-radius: 20px;
-    text-align: center;
     font-family: 'Manrope', sans-serif;
 }
-
+  
+main {
+    width: 70%;
+    height: 60vh;
+    margin-top: 5%;
+    border-radius: 20px;
+    text-align: center;
+    color: black;
+}
+  
 .login-header {
     padding: 10px;
     font-size: 20px;
@@ -23,52 +22,47 @@ main {
     gap: 10px;
 }
 
-.login-header h1{
+.login-header h1 {
     font-weight: 500;
 }
-
-.login-header p{
+  
+.login-header p {
     font-size: 15px;
 }
-
-
+  
 .login-container {
     display: flex;
     flex-direction: column;
-    padding: 10px;
-    gap: 20px;
-    font-weight: 200;
     align-items: center;
+    gap: 20px;
+    padding: 10px;
+    font-weight: 200;
 }
-
+  
 .login-container label {
     display: flex;
     gap: 5px;
 }
-
+  
 .login-container .email-label {
-    display: flex;
     gap: 55px;
 }
-
+  
 .login-container .password-label {
-    display: flex;
     gap: 30px;
 }
-
+  
 .login-input {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 10px;
 }
-
+  
 .login-container label img {
     width: 15px;
-    justify-content: center;
-    align-items: center;
 }
-
+  
 .login-container input {
     border: 1px solid black;
     text-align: center;
@@ -77,133 +71,77 @@ main {
     color: black;
     height: 30px;
 }
-
+  
 .login-container input:hover {
     background-color: black;
     color: white;
 }
-
+  
 .login-container button {
+    border: none;
     border-radius: 12px;
-    width:fit-content;
     background-color: black;
     color: white;
     height: 30px;
     cursor: pointer;
-    border: none;
+    padding: 0 15px;
 }
-
+  
 .login-container button:hover {
     background-color: white;
     color: black;
 }
-
+  
 .login-container p {
     font-size: 15px;
 }
-
-.login-container a{
+  
+.login-container a {
     text-decoration: none;
     color: rgb(63, 63, 63);
 }
-
+  
 @media only screen and (max-width: 370px) {
-    body {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    
     main {
-        width: 90%;
-        color: black;
-        margin-top: 15%;
-        width: 70%;
-        height: 60vh;
-        border-radius: 20px;
-        text-align: center;
-        font-family: 'Manrope', sans-serif;
+      width: 90%;
+      margin-top: 15%;
     }
-
+  
     .login-header {
-        padding: 10px;
-        font-size: 15px;
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
+      font-size: 15px;
     }
-
-    .login-header h1{
-        font-weight: 300;
+  
+    .login-header h1 {
+      font-weight: 300;
     }
-
-    .login-header p{
-        font-size: 10px;
-    }
-
-
-    .login-container {
-        display: flex;
-        flex-direction: column;
-        padding: 10px;
-        gap: 20px;
-        font-weight: 200;
-        align-items: center;
-    }
-
-    .login-container label {
-        display: flex;
-        gap: 5px;
-        flex-direction: column;
-    }
-
-    .login-input {
-        display: flex;
-        justify-content: center;
-        gap: 10px;
-    }
-
-    .login-container label img {
-        width: 15px;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .login-container input {
-        border: 1px solid black;
-        text-align: center;
-        font-weight: 200;
-        border-radius: 12px;
-        color: black;
-        height: 30px;
-    }
-
-    .login-container input:hover {
-        background-color: black;
-        color: white;
-    }
-
-    .login-container button {
-        border-radius: 12px;
-        width: 30%;
-        background-color: black;
-        color: white;
-        height: 30px;
-        cursor: pointer;
-        border: none;
-    }
-
-    .login-container button:hover {
-        background-color: white;
-        color: black;
-    }
-
+  
+    .login-header p,
     .login-container p {
-        font-size: 10px;
+      font-size: 10px;
+    }
+  
+    .login-container input,
+    .login-container button {
+      height: 30px;
+      font-size: 14px;
+    }
+  
+    .login-container button {
+      width: 30%;
+    }
+  
+    .login-container label {
+      flex-direction: column;
+      align-items: center;
+      gap: 5px;
     }
 
-    .login-container a{
-        text-decoration: none;
-        color: rgb(63, 63, 63);
+    .login-container .email-label,
+    .login-container .password-label {
+    gap: 10px;
+    flex-direction: column; 
+    align-items: center;
+    text-align: center;
     }
 }
+  
