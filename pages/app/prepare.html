@@ -12,11 +12,27 @@
 </head>
 <body>
     <header>
-        <img src="../../assets/logos/pumpplan-logo.svg" alt="pump plan main logo"> <a href="../../index.html">Logout</a>
+        <img src="../../assets/logos/pumpplan-logo.svg" alt="pump plan main logo"> <a href="app.html">Return to Home</a>
     </header>
     <main>
         <section class="hero-section">
-            
+            <h2>Build Your Workout</h2>
+
+            <label for="plan-select">Choose plan:</label>
+            <select name="plan-select" id="plan-select">
+                <option value="">-- Select Plan --</option>
+                <option value="upper">Upper Body</option>
+                <option value="lower">Lower Body</option>
+                <option value="full">Full Body</option>
+            </select>
+            <label for="level-select">Choose difficulty:</label>
+            <select name="level-select" id="level-select">
+                <option value="">-- Choose difficulty</option>
+                <option value="beginner">Beginner</option>
+                <option value="intermediate">Intermediate</option>
+                <option value="expert">Expert</option>
+            </select>
+            <button id="build-plan">Build Plan</button>
         </section>
     </main>
     <script src="../../scripts/app.js"></script>
