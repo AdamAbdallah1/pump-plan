@@ -18,6 +18,18 @@ header a:hover{
 }
 
 @media only screen and (max-width: 370px) {
+    .hero-section {
+        display: flex;
+        font-family: 'Manrope', sans-serif;
+        flex-direction: column;
+        margin-top: 10px;
+        align-items: center;
+    }
+
+    .wel-email {
+        color: gray;
+    }
+
     .search-container {
         display: flex;
         justify-content: center;
