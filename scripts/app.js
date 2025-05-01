@@ -7,3 +7,8 @@ document.addEventListener("DOMContentLoaded", () => {
     })
 })
 
+function searchExercises() {
+    const query = document.getElementById("search-input").value.trim();
+    const url = `https://api.api-ninjas.com/v1/exercises?name=${encodeURIComponent(query)}`;
+
+}
