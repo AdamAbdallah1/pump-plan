@@ -17,3 +17,15 @@ const firebaseConfig = {
 };
 
 const app = initializeApp(firebaseConfig);
+document.addEventListener("DOMContentLoaded", () => {
+    const regBtn = document.getElementById("register-btn");
+    regBtn.addEventListener("click", (event) => {
+        const email = document.getElementById("email").value;
+        const password = document.getElementById("password").value;
+        if (email && password){
+            alert("Done");
+        } else {
+            alert("no");
+        }
+    })
+})
