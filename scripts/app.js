@@ -33,7 +33,6 @@ async function searchExercises() {
     function displayResults(exercises) {
     const container = document.getElementById('results');
     container.innerHTML = '';
-
     if (exercises.length === 0) {
         container.innerHTML = "<p>No exercises found.</p>";
         return;
