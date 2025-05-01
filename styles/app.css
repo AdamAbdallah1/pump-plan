@@ -2,6 +2,21 @@
     margin: 0;
 }
 
+header {
+    display: flex;
+    justify-content: space-around;
+}
+
+header a{
+    text-decoration: none;
+    color: gray;
+    font-family: 'Manrope', sans-serif;
+}
+
+header a:hover{
+    color: white;
+}
+
 @media only screen and (max-width: 370px) {
     .search-container {
         display: flex;
