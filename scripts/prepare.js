@@ -55,9 +55,8 @@ function getMusclesByRegion(region) {
     return full;
 }
 
-function displayResults(exercises) {
+function displayResults(exercises, level) {
     const resultsDiv = document.getElementById("results");
-    
     resultsDiv.innerHTML = "";
 
     if (exercises.length === 0) {
@@ -65,13 +64,21 @@ function displayResults(exercises) {
         return;
     }
 
+    // Determine reps and sets
+    let repsSets = "";
+    if (level === "beginner") repsSets = "3 sets × 10–12 reps";
+    else if (level === "intermediate") repsSets = "4 sets × 8–10 reps";
+    else if (level === "expert") repsSets = "5 sets × 6–8 reps";
+
     exercises.forEach((ex) => {
         const card = document.createElement("div");
         card.className = "exercise-card";
         card.innerHTML = `
             <h3>${ex.name}</h3>
-            <p class="muscle"><strong>Muscle:</strong> ${ex.muscle}</p>
-            <p class="difficulty"><strong>Difficulty:</strong> ${ex.difficulty}</p>
+            <p><strong>Muscle:</strong> ${ex.muscle}</p>
+            <p><strong>Difficulty:</strong> ${ex.difficulty}</p>
+            <p><strong>Sets & Reps:</strong> ${repsSets}</p>
+            <p><strong>Instructions:</strong> ${ex.instructions}</p>
             <hr>
         `;
         resultsDiv.appendChild(card);
