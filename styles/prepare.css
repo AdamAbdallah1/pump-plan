@@ -101,6 +101,15 @@ header a:hover {
         padding: 10px;
     }
 
+    .exercise-card:hover {
+        transform: scale(1.2); 
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); 
+        background-color: white;
+        border: 1px solid black;
+        color: black;
+        cursor: pointer;
+    }
+
     .exercise-card h3 {
         margin-top: 10px;
         font-weight: 600;
@@ -178,23 +187,24 @@ header a:hover {
 
     .exercise-card {
         display: flex;
-        width: 50%;
+        width: 70%;
         flex-direction: column;
         gap: 10px;
         align-items: center;
-        background-color: black;
+        background-color: white;
+        border: 1px solid black;
         border-radius: 12px;
-        color: white;
+        color: black;
         padding: 10px;
     }
 
     .exercise-card:hover {
         transform: scale(1.2); 
         box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); 
-        background-color: white;
-        color: black;
+        background-color: black;
+        border: 1px solid black;
+        color: white;
         cursor: pointer;
-
     }
 
     .exercise-card h3 {
