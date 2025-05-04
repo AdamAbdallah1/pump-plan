@@ -69,18 +69,32 @@ function displayResults(exercises, level) {
     else if (level === "intermediate") repsSets = "4 sets × 8–10 reps";
     else if (level === "expert") repsSets = "5 sets × 6–8 reps";
 
-    exercises.forEach((ex) => {
+    exercises.forEach((ex, index) => {
         const card = document.createElement("div");
         card.className = "exercise-card";
         card.innerHTML = `
-                <h3>${ex.name}</h3>
-                <strong>Muscle:</strong> ${ex.muscle}
-                <strong>Difficulty:</strong> ${ex.difficulty}
-                <strong>Sets & Reps:</strong> ${repsSets}
+            <h3>${ex.name}</h3>
+            <p><strong>Muscle:</strong> ${ex.muscle}</p>
+            <p><strong>Difficulty:</strong> ${ex.difficulty}</p>
+            <p><strong>Sets & Reps:</strong> ${repsSets}</p>
+            <button class="instruction-btn" data-index="${index}">Show Instructions</button>
+            <div class="instruction-box" id="instruction-${index}" style="display: none; margin-top: 8px; background: #f9f9f9; padding: 10px; border-radius: 5px;">
+                <strong>Instructions:</strong> ${ex.instructions || "No instructions available."}
+            </div>
         `;
         resultsDiv.appendChild(card);
     });
+
+    const buttons = document.querySelectorAll(".instruction-btn");
+    buttons.forEach(btn => {
+        btn.addEventListener("click", () => {
+            const idx = btn.getAttribute("data-index");
+            const box = document.getElementById(`instruction-${idx}`);
+            box.style.display = box.style.display === "none" ? "block" : "none";
+        });
+    });
 }
+
 
 function downloadPlanAsText(exercises, level) {
     let planText = `Your Workout Plan (${level.toUpperCase()} Level)\n\n`;
