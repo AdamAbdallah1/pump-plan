@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
             .then((userCredential) => {
                 authStatus.textContent = "User Logged in Successfully!";
                 const user = userCredential.user;
-                window.location.href = "/pages/app/app.html";
+                window.location.href = "/pump-plan/pages/app/app.html";
             })
             .catch((error) => {
                 const errorCode = error.code;
