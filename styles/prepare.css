@@ -83,9 +83,17 @@ header a:hover {
         margin-top: 10px;
     }
 
+    .results {
+        display: flex;
+        padding: 10px;
+        gap: 10px;
+        flex-direction: column;
+    }
+
     .exercise-card {
         display: flex;
         flex-direction: column;
+        border-radius: 12px;
         gap: 10px;
         align-items: center;
         background-color: black;
@@ -93,7 +101,7 @@ header a:hover {
         padding: 10px;
     }
 
-    .exercise-card li {
+    .exercise-card h3 {
         margin-top: 10px;
         font-weight: 600;
         text-decoration: underline;
@@ -160,17 +168,25 @@ header a:hover {
         margin-top: 10px;
     }
 
+    .results {
+        display: flex;
+        gap: 10px;
+        padding: 10px;
+        flex-direction: column;
+    }
+
     .exercise-card {
         display: flex;
         flex-direction: column;
         gap: 10px;
         align-items: center;
         background-color: black;
+        border-radius: 12px;
         color: white;
         padding: 10px;
     }
 
-    .exercise-card li {
+    .exercise-card h3 {
         margin-top: 10px;
         font-weight: 600;
         text-decoration: underline;
