@@ -2,16 +2,21 @@ const apiKey = "rVQFFCankywibrPQbhYO2g==Z0WFgsTrqVbabiUi";
 
 document.addEventListener("DOMContentLoaded", () => {
     const prepareBtn = document.getElementById("build-plan");
+    const downloadBtn = document.getElementById("download-plan");
+    const messageDisplay = document.getElementById("displayR");
+
+    let currentExercises = [];
+    let currentLevel = "";
 
     prepareBtn.addEventListener("click", async () => {
         const planSelect = document.getElementById("plan-select").value;
         const levelSelect = document.getElementById("level-select").value;
         const resultsDisplay = document.getElementById("results");
-        const messageDisplay = document.getElementById("displayR");
 
         if (planSelect && levelSelect) {
             messageDisplay.textContent = "Preparing your Plan...";
             messageDisplay.style.color = "green";
+            downloadBtn.style.display = "none";
 
             const muscles = getMusclesByRegion(planSelect);
             const allExercises = [];
@@ -36,12 +41,22 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
             }
 
+            currentExercises = allExercises;
+            currentLevel = levelSelect;
+
             displayResults(allExercises, levelSelect);
+            downloadBtn.style.display = "block";
             messageDisplay.textContent = "";
 
         } else {
             messageDisplay.textContent = "Please select all required fields.";
             messageDisplay.style.color = "#810000";
+        }
+    });
+
+    downloadBtn.addEventListener("click", () => {
+        if (currentExercises.length > 0) {
+            downloadPlanAsText(currentExercises, currentLevel);
         }
     });
 });
@@ -94,7 +109,6 @@ function displayResults(exercises, level) {
         });
     });
 }
-
 
 function downloadPlanAsText(exercises, level) {
     let planText = `Your Workout Plan (${level.toUpperCase()} Level)\n\n`;
