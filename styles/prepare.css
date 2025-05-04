@@ -221,8 +221,11 @@ header a:hover {
         text-decoration: underline;
     }
 
-    .instructions {
-        display: none;
+    .instruction-box {
+        color: black;
     }
 
+    .instruction-btn {
+        width: fit-content;
+    }
 }
