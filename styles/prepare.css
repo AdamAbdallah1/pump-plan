@@ -141,15 +141,20 @@ header a:hover {
         margin-top: 10px;
     }
 
-    .results {
+    .exercise-card {
         display: flex;
         flex-direction: column;
         gap: 10px;
         align-items: center;
+        background-color: black;
+        color: white;
+        padding: 10px;
     }
 
-    .results h3 {
+    .exercise-card li {
+        margin-top: 10px;
         font-weight: 600;
+        text-decoration: underline;
     }
 
 }
