@@ -73,9 +73,7 @@ function displayResults(exercises, level) {
         const card = document.createElement("div");
         card.className = "exercise-card";
         card.innerHTML = `
-            <ul>
-                <li><h3>${ex.name}</h3></li>
-            </ul>
+                <h3>${ex.name}</h3>
                 <strong>Muscle:</strong> ${ex.muscle}
                 <strong>Difficulty:</strong> ${ex.difficulty}
                 <strong>Sets & Reps:</strong> ${repsSets}
