@@ -179,6 +179,12 @@ header a:hover {
         background-color: white;
         color: black;
         border: 1px solid black;
+        width: fit-content;
+    }
+
+    .download-plan {
+        display: none; 
+        margin-top: 10px;
     }
 
     .displayR {
