@@ -81,3 +81,34 @@ function displayResults(exercises, level) {
         resultsDiv.appendChild(card);
     });
 }
+
+function downloadPlanAsText(exercises, level) {
+    let planText = `Your Workout Plan (${level.toUpperCase()} Level)\n\n`;
+
+    let repsSets = "";
+    if (level === "beginner") repsSets = "3 sets × 10–12 reps";
+    else if (level === "intermediate") repsSets = "4 sets × 8–10 reps";
+    else if (level === "expert") repsSets = "5 sets × 6–8 reps";
+
+    exercises.forEach((ex, index) => {
+        planText += `${index + 1}. ${ex.name}\n`;
+        planText += `   Muscle: ${ex.muscle}\n`;
+        planText += `   Difficulty: ${ex.difficulty}\n`;
+        planText += `   Sets & Reps: ${repsSets}\n`;
+        if (ex.instructions) {
+            planText += `   Instructions: ${ex.instructions}\n`;
+        }
+        planText += `\n`;
+    });
+
+    const blob = new Blob([planText], { type: "text/plain" });
+    const url = URL.createObjectURL(blob);
+
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = "workout_plan.txt";
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+}
