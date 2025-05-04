@@ -16,29 +16,32 @@
     <main>
         <section class="hero-section">
             <h2>Build Your Workout</h2>
-
-            <section class="plan">
-                <label for="plan-select">Choose plan:</label>
-                <select name="plan-select" id="plan-select">
-                    <option value="">-- Select Plan --</option>
-                    <option value="upper">Upper Body</option>
-                    <option value="lower">Lower Body</option>
-                    <option value="full">Full Body</option>
-                </select>
+            <section class="selection">
+                <section class="plan">
+                    <label for="plan-select">Choose plan:</label>
+                    <select name="plan-select" id="plan-select">
+                        <option value="">-- Select Plan --</option>
+                        <option value="upper">Upper Body</option>
+                        <option value="lower">Lower Body</option>
+                        <option value="full">Full Body</option>
+                    </select>
+                </section>
+                <section class="plan">
+                    <label for="level-select">Choose difficulty:</label>
+                    <select name="level-select" id="level-select">
+                        <option value="">-- Choose difficulty</option>
+                        <option value="beginner">Beginner</option>
+                        <option value="intermediate">Intermediate</option>
+                        <option value="expert">Expert</option>
+                    </select>
+                </section>
             </section>
-            <section class="plan">
-                <label for="level-select">Choose difficulty:</label>
-                <select name="level-select" id="level-select">
-                    <option value="">-- Choose difficulty</option>
-                    <option value="beginner">Beginner</option>
-                    <option value="intermediate">Intermediate</option>
-                    <option value="expert">Expert</option>
-                </select>
+            <section class="footer">
+                <button id="build-plan">Build Plan</button>
+                <div id="results" class="results"></div>
             </section>
-            <button id="build-plan">Build Plan</button>
-            <div id="results" class="results"></div>
         </section>
     </main>
-    <script src="../../scripts/app.js"></script>
+    <script src="../../scripts/prepare.js"></script>
 </body>
 </html>
