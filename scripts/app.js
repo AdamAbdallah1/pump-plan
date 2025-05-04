@@ -42,11 +42,11 @@ async function searchExercises() {
         const card = document.createElement('div');
         card.className = 'exercise-card';
         card.innerHTML = `
-            <h3>${ex.name}</h3>
-            <p><strong>Type:</strong> ${ex.type}</p>
-            <p><strong>Muscle:</strong> ${ex.muscle}</p>
-            <p><strong>Difficulty:</strong> ${ex.difficulty}</p>
-            <p><strong>Instructions:</strong> ${ex.instructions}</p>
+            <ul>
+                <li><h3>${ex.name}</h3></li>
+                <p><strong>Muscle:</strong> ${ex.muscle}</p>
+                <p><strong>Difficulty:</strong> ${ex.difficulty}</p>
+            </ul>
         `;
         container.appendChild(card);
     });
