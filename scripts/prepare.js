@@ -29,14 +29,14 @@ document.addEventListener("DOMContentLoaded", () => {
                     }
 
                     const data = await response.json();
-                    allExercises.push(...data);
+                    allExercises.push(...data.slice(0, 2));
 
                 } catch (error) {
                     console.error("Error fetching:", error);
                 }
             }
 
-            displayResults(allExercises);
+            displayResults(allExercises, levelSelect);
             messageDisplay.textContent = "";
 
         } else {
@@ -64,7 +64,6 @@ function displayResults(exercises, level) {
         return;
     }
 
-    // Determine reps and sets
     let repsSets = "";
     if (level === "beginner") repsSets = "3 sets × 10–12 reps";
     else if (level === "intermediate") repsSets = "4 sets × 8–10 reps";
@@ -74,12 +73,12 @@ function displayResults(exercises, level) {
         const card = document.createElement("div");
         card.className = "exercise-card";
         card.innerHTML = `
-            <h3>${ex.name}</h3>
-            <p><strong>Muscle:</strong> ${ex.muscle}</p>
-            <p><strong>Difficulty:</strong> ${ex.difficulty}</p>
-            <p><strong>Sets & Reps:</strong> ${repsSets}</p>
-            <p><strong>Instructions:</strong> ${ex.instructions}</p>
-            <hr>
+            <ul>
+                <li><h3>${ex.name}</h3></li>
+            </ul>
+                <strong>Muscle:</strong> ${ex.muscle}
+                <strong>Difficulty:</strong> ${ex.difficulty}
+                <strong>Sets & Reps:</strong> ${repsSets}
         `;
         resultsDiv.appendChild(card);
     });
