@@ -102,7 +102,7 @@ header a:hover {
     }
 
     .exercise-card:hover {
-        transform: scale(1.2); 
+        transform: scale(1); 
         box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); 
         background-color: white;
         border: 1px solid black;
@@ -114,6 +114,14 @@ header a:hover {
         margin-top: 10px;
         font-weight: 600;
         text-decoration: underline;
+    }
+
+    .instruction-box {
+        color: black;
+    }
+
+    .instruction-btn {
+        width: fit-content;
     }
     
 }
@@ -199,7 +207,7 @@ header a:hover {
     }
 
     .exercise-card:hover {
-        transform: scale(1.2); 
+        transform: scale(1); 
         box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); 
         background-color: black;
         border: 1px solid black;
@@ -211,6 +219,10 @@ header a:hover {
         margin-top: 10px;
         font-weight: 600;
         text-decoration: underline;
+    }
+
+    .instructions {
+        display: none;
     }
 
 }
